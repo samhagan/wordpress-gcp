@@ -54,7 +54,7 @@ Google Kubernetes is a managed Kubernetes platform for deploying containerized a
 
 Option 1 (GAE) is likely the best solution because it significantly minimizes operational overhead relative to other options. It should be able to handle the increasing active users and spikes 2x month. The most likely issue will be related to overtaxing MySQL in terms of queries or connection count. This can be mitigated by (1) vertically scaling MySQL to handle spikes or (2) implementing caching (e.g. redis/memorystore) via a plugin [3] (note this plugin has not been investigated) to reduce queries. Note that auto-scaling would need to be limited in order to not exceed Cloud SQL's max connections [4].
 
-GKE provides more flexiblity over time but at the cost of increased operation overhead. For example, with the GKE implementation we could leverage caching at a CDN or at the application level (e.g. nginx sidecar - high cache misses relative to CDN).
+GKE provides more flexiblity over time but at the cost of increased operation overhead. For example, with the GKE implementation we could leverage caching at a CDN or at the application level (e.g. nginx sidecar - high cache misses relative to CDN). However, based on the specified constraints, these benefits do not initially appear to outweigh the operational complexity of using Kubernetes.
 
 Not discussed is deploying Wordpress directly on a VM. This has similar complexity to GKE once you handle auto-scaling, so was not addressed because GKE would be a better solution in that circumstance.
 
