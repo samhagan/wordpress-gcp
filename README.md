@@ -63,12 +63,17 @@ Not discussed is deploying Wordpress directly on a VM. This has similar complexi
 Both options could be managed via Git workflows with deployment to a staging environment prior to production.
 
 Footnotes:
+
 ¹By default Wordpress stores media file on disk. Google provides a plugin that stores allows media files to be stored in Google Cloud Storage [1].
+
 ²User base is U.S. (West Coast) and Japan, which are 16 hours apart. Likely result in sustained increased activity for the 24hr period.
 
 References:
+
 [1] https://wordpress.org/plugins/gcs/
+
 [2] https://cloud.google.com/wordpress
+
 [3] https://wordpress.org/plugins/redis-cache/
+
 [4] https://cloud.google.com/sql/docs/mysql/connect-app-engine#connection_limits]
-https://wordpress.org/support/
