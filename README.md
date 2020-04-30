@@ -31,7 +31,7 @@ Google App Engine (GAE) is a managed serverless platform. Wordpress is written i
 - GAE does not appear to integrate with Google CDN, which means more traffic will be handled by the application servers.
 - Less flexible than Option 2 in terms of adding components / making modification (also the reason it has far less management overhead)
 - Secrets management does not appear robust. Would likely need to inject secrets (e.g. database password) in via CI (if automated deploys are desired).
-- MySQL is would be configured with failover, but any failover would result in downtime
+- MySQL would be configured with failover, but any failover would result in downtime
 
 ### Option 2: Google Kubernetes Engine + Cloud SQL
 
@@ -48,7 +48,7 @@ Google Kubernetes is a managed Kubernetes platform for deploying containerized a
 #### Cons
 
 - managing GKE is relatively simple, but has substantially more overhead than GAE
-- MySQL is would be configured with failover, but any failover would result in downtime
+- MySQL would be configured with failover, but any failover would result in downtime
 
 ### Analysis + Recommendation
 
